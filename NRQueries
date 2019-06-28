@@ -1,0 +1,2 @@
+## Replace container_name with actual container name
+SELECT average(memoryVirtualSizeBytes) FROM ProcessSample TIMESERIES FACET containerName where containerName LIKE 'container_name%' LIMIT 100 SINCE today
