@@ -1,2 +1,5 @@
-## Replace container_name with actual container name
+## To find memory of container (Replace container_name with actual container name)
 SELECT average(memoryVirtualSizeBytes) FROM ProcessSample TIMESERIES FACET containerName where containerName LIKE 'container_name%' LIMIT 100 SINCE today
+
+# To find mountpoint Disk usage
+SELECT average(diskUsedPercent) FROM StorageSample WHERE mountPoint = '/var/lib/osd/pxns/xxxxxx' AND hostname='xxxxxx'
